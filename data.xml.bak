@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sportsponsorship>
+   <sponsorship>
+          <year>2019</year>
+	  <company>Pepsi</company>
+	  <id>SID00</id>
+	  <name>Jimin</name>
+	  <role>Athlete</role>
+	  <sport>Badminton</sport>
+	  <contract>3</contract>
+	  <fund>gold(around 3lakhs)</fund>
+   </sponsorship>
+   <sponsorship>
+      <year>2016</year>
+	  <company>Red Bulll</company>
+	  <id>SID01</id>
+	  <name>Femin</name>
+	  <role>Captain</role>
+	  <sport>Volleyball team:Netherlands</sport>
+	  <contract>5</contract>
+	  <fund>silver(around 2 lakhs)</fund>
+   </sponsorship>
+   <sponsorship>
+          <year>2003</year>
+	  <company>Castrol</company>
+	  <id>SID02</id>
+	  <name>Arjun</name>
+	  <role>Captain</role>
+	  <sport>Hockey team:Tampa Bay Lightning</sport>
+	  <contract>4</contract>
+	  <fund>gold(around 3 lakhs)</fund>
+   </sponsorship>
+   <sponsorship>
+          <year>2005</year>
+	  <company>Coca Cola</company>
+	  <id>SID02</id>
+	  <name>Max</name>
+	  <role>Athlete</role>
+	  <sport>Badminton</sport>
+	  <contract>5</contract>
+	  <fund>silver(around 2 lakhs)</fund>
+   </sponsorship>
+   <sponsorship>
+          <year>2009</year>
+	  <company>Money gram</company>
+	  <id>SID03</id>
+	  <name>Rosy</name>
+	  <role>Captain</role>
+	  <sport>Golf team:Wake Forest Demon Deacon</sport>
+	  <contract>2</contract>
+	  <fund>bronze(around 1 lakhs)</fund>
+   </sponsorship>
+   <sponsorship>
+          <year>2022</year>
+	  <company>Fortuna</company>
+	  <id>SID04</id>
+	  <name>Danish</name>
+	  <role>Captain</role>
+	  <sport>Motor Sports</sport>
+	  <contract>4</contract>
+	  <fund>gold(around 3 lakhs)</fund>
+   </sponsorship>
+   <sponsorship>
+          <year>2008</year>
+	  <company>Reebook</company>
+	  <id>SID05</id>
+	  <name>Devraj</name>
+	  <role>Captain</role>
+	  <sport>Basketball team: Chicago Bulls	</sport>
+	  <contract>2</contract>
+	  <fund>bronze(around 1 lakhs)</fund>
+   </sponsorship>
+   <sponsorship>
+          <year>2011</year>
+	  <company>Adidas</company>
+	  <id>SID06</id>
+	  <name>Perz</name>
+	  <role>Captain</role>
+	  <sport>Cricket team:Royal Challengers Banglore</sport>
+	  <contract>4</contract>
+	  <fund>gold(around 3 lakhs)</fund>
+   </sponsorship>
+   <sponsorship>
+          <year>2012</year>
+	  <company>Reebook</company>
+	  <id>SID07</id>
+	  <name>Gorge</name>
+	  <role>Captain</role>
+	  <sport>Basketball team:Dallas Mavericks</sport>
+	  <contract>5</contract>
+	  <fund>silver(around 2 lakhs)</fund>
+   </sponsorship>
+   <sponsorship>
+          <year>2017</year>
+	  <company>Puma</company>
+	  <id>SID08</id>
+	  <name>Olivander</name>
+	  <role>Captain</role>
+	  <sport>Football team:Indianapolis Colts</sport>
+	  <contract>4</contract>
+	  <fund>gold(around 3 lakhs)</fund>
+   </sponsorship>
+   <sponsorship>
+          <year>2016</year>
+	  <company>Samsung</company>
+	  <id>SID09</id>
+	  <name>Henry Femingan</name>
+	  <role>Captain</role>
+	  <sport>Hockey team:Philadelphia Flyers</sport>
+	  <contract>2</contract>
+	  <fund>bronze(around 1 lakhs)</fund>
+   </sponsorship>
+   <sponsorship>
+          <year>2018</year>
+	  <company>Kellogs</company>
+	  <id>SID10</id>
+	  <name>Nestle</name>
+	  <role>Captain</role>
+	  <sport>Baseball team:Pittsburgh Pirates	</sport>
+	  <contract>4</contract>
+	  <fund>gold(around 3 lakhs)</fund>
+   </sponsorship>
+   <sponsorship>
+          <year>2022</year>
+	  <company>Gucci</company>
+	  <id>SID11</id>
+	  <name>Coca Cola</name>
+	  <role>Captain</role>
+	  <sport>Football team:Saskatchewan Roughriders</sport>
+	  <contract>5</contract>
+	  <fund>silver(around 2 lakhs)</fund>
+   </sponsorship>
+</sportsponsorship>

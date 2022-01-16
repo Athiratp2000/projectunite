@@ -1,0 +1,28 @@
+<xs:schema attributeFormDefault="unqualified" elementFormDefault="qualified" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="sportsponsorship">
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="sponsorship" maxOccurs="unbounded" minOccurs="0">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element type="xs:byte" name="year"/>
+              <xs:element type="xs:string" name="company"/>
+              <xs:element type="xs:byte" name="id"/>
+			  <xs:element type="xs:string" name="name"/>
+			  <xs:element type="xs:string" name="role"/>
+			  <xs:element type="xs:string" name="sport"/>
+			  <xs:element type="xs:byte" name="contract"/>
+              <xs:element type="valid" name="fund"/>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+  <xs:simpleType name="valid">
+    <xs:restriction base="xs:integer">
+    <xs:minInclusive value="50000"></xs:minInclusive>
+    <xs:maxInclusive value="800000"></xs:maxInclusive>
+    </xs:restriction>
+    </xs:simpleType>
+</xs:schema>
