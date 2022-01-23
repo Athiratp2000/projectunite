@@ -1,0 +1,317 @@
+<html lang="en">
+<head>
+    <style>
+        body {
+          background-image: url('compo1.jpg');
+        }
+        </style>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Company admin</title>
+    
+    <style>
+         table{
+            padding : 20px;
+            border-collapse: collapse;
+            /* border: 1px solid #62cb6b; */
+                       
+        }
+       
+        table,td,th{
+            
+            padding : 15px;
+            width: 1000px;            
+        }
+        th{
+          background-color: #62cb6b;
+        }
+        header{
+    margin-top: -10px;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    background-color: black;
+    opacity: 0.9;
+    z-index: 5;
+    justify-content: space-between;
+    position: fixed;
+    margin-left: -10px;
+    }
+    img 
+        {
+           width: 1340px;
+           height:450px;
+           object-fit: cover;
+           filter:saturate(70%);
+        }
+        #btn input:hover
+        {
+            cursor: pointer;
+        }
+       
+      .menu  button {           
+    width: 260px;
+    font-size: medium;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    background-color:black;
+    color: white;
+    padding: 10px;
+}
+.menu button:hover{
+    cursor: pointer;
+}
+hr{
+        width: 400px;
+        margin-left: 350px;
+    }
+    input {           
+    width: 370px;
+    font-size: medium;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    background-color:black;
+    color: white;
+    padding: 10px;
+}
+* 
+    {
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        box-sizing: border-box; 
+               
+    }
+    </style>
+</head>
+
+<body>
+    <div id="image">      
+        </div>
+        <div id="head" style="margin-left: 100px;">
+            <div>
+              <h1 style="color: black; font-weight: lighter;margin-left: 500px;"> Sponsorship Requests List</h1><br> 
+          </div></div>
+          <div class="container" style="padding-top:5px;">
+            <div class="menu">
+                <center><button id="showbtn" class="btns">Sponsorship Details</button>
+                    <button id="quickdelbtn" class="btns">Delete first record</button>
+                    <button id="delbtn" class="btns">Delete</button>
+                    <button id="changebtn" class="btns">Approve/Reject</button></center>
+                
+    
+            </div>
+    
+            <div class="housedetails">            
+                <table id="tbl" style="transform: translate(0px,20px);margin-left: 200px;"></table>
+            </div>
+    
+            <div id="overlayform" style="display: none; padding-top: 40px; box-sizing: border-box;margin-left: 400px;" class="overlay">
+                 <div class="wrap">
+                    <h2 style="margin-left:-30px;font-weight: lighter;margin-left: -400px;"><center>Add New House Details</center></h2>
+                    <form style="border: 1px solid black;padding: 70px;width:500px; background-color: black;" id="xmlform" class="jsform" onsubmit="return false">          
+                        <input type="text" id="id" placeholder="House id"><br><br>
+                        <input type="text" id="name" placeholder="House name"><br><br>
+                        <input type="text" id="price" placeholder="Price"><br><br>
+                        <input type="text" id="address" placeholder="Address"><br><br>
+                        <input type="text" id="city" placeholder="City"><br><br>
+                        <input type="text" id="information" placeholder="Information"><br><br><br>
+                       
+                        <button style="background-color: #62cb6b;width:370px;height: 40px;border: none;cursor: pointer; " id="submitbtn"class="frmbtn">Submit</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+</body>
+
+<script>
+    if (window.XMLHttpRequest)
+    {
+        xmlhttp=new XMLHttpRequest();  
+    }  
+    else
+    {
+        xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");  
+    }  
+
+    xmlhttp.open("GET","companyadmin.xml",false);  
+    xmlhttp.send(); 
+    xmlDoc=xmlhttp.responseXML; 
+
+    // Button event listeners  
+    document.getElementById("showbtn").addEventListener("click",shown);
+    document.getElementById("delbtn").addEventListener("click",deln);
+    document.getElementById("quickdelbtn").addEventListener("click",quickdeln);
+    document.getElementById("changebtn").addEventListener("click",changen);
+    document.getElementById("addbtn").addEventListener("click",del);
+    document.getElementById("submitbtn").addEventListener("click",addnewele);
+
+    // display function 
+    function shown()
+    {
+           var div = document.getElementById("overlayform");
+           var img= document.getElementById("image");
+           var head= document.getElementById("head");
+           var table= document.getElementById("tbl");
+           head.style.paddingTop ="60px";
+           table.style.display = "block";
+           if (div.style.display !== " none")
+              {
+                 div.style.display = "none";
+                
+              }
+           if (img.style.display !== " none")
+              {
+                 img.style.display = "none";
+                
+              }
+              
+        var x = xmlDoc.getElementsByTagName("sponsee");
+        var table = `<tr>
+                    <th>Sponsee Id</th>
+                    <th>Name</th>
+                    <th>Price</th>
+                    <th>City</th>
+                    <th>Information</th>
+                    <th>State</th>
+                    </tr>`;
+        
+
+        for (i = 0; i < x.length; i++) {
+            table += "<td>" +
+                    x[i].getElementsByTagName("id")[0]
+					.childNodes[0].nodeValue + "</td><td>" +
+					x[i].getElementsByTagName("name")[0]
+					.childNodes[0].nodeValue + "</td><td>" +
+					x[i].getElementsByTagName("price")[0]
+					.childNodes[0].nodeValue + "</td><td>" +
+					x[i].getElementsByTagName("city")[0]
+					.childNodes[0].nodeValue + "</td><td>" +
+					x[i].getElementsByTagName("information")[0]
+					.childNodes[0].nodeValue + "</td><td>" +
+                    x[i].getElementsByTagName("state")[0]
+					.childNodes[0].nodeValue + "</td></tr>";
+        }
+
+        // xml data
+        document.getElementById("tbl").innerHTML = table;
+    }
+
+    //  Delete function  
+    function quickdeln(){
+        y = xmlDoc.getElementsByTagName("sponsee")[0];
+        xmlDoc.documentElement.removeChild(y);
+        alert("The Node 'sponsee' has been deleted!");
+        shown();
+    }
+    
+    //  Quick delete function  
+    function deln()
+        {   
+            var x = xmlDoc.getElementsByTagName("sponsee");
+            var node_number = parseInt(window.prompt("Enter node number to delete"));
+            node_number = node_number-1;
+            console.log(x.length)
+            console.log(node_number, typeof(node_number))
+            if (node_number<x.length){
+                y = xmlDoc.getElementsByTagName("sponsee")[node_number];
+                xmlDoc.documentElement.removeChild(y);
+                alert("The Node has been deleted");
+                shown();
+            }
+            else{
+                alert("Invalid node number");
+            }
+        }
+
+   
+        function addnewele(){
+        
+        console.log("add new element");
+        var hid = document.getElementById("id").value;
+        var hname = document.getElementById("name").value;
+        var hprice = document.getElementById("price").value;
+        var hcity= document.getElementById("city").value;
+        var hinformation = document.getElementById("information").value;
+        var hsoldstatus ="Pending";
+        var hstate = "Reject";
+    
+    
+        newElement = xmlDoc.createElement("Sports");
+        x = xmlDoc.getElementsByTagName("sponsee")[0];
+    
+    
+        newhid = xmlDoc.createElement("id");
+        newhidtxt = xmlDoc.createTextNode(hid);
+        newhid.appendChild(newhidtxt);
+        newElement.appendChild(newhid);
+    
+        newhname = xmlDoc.createElement("name");
+        newhnametxt = xmlDoc.createTextNode(hname);
+        newhname.appendChild(newhnametxt);
+        newElement.appendChild(newhname);
+    
+        newhprice = xmlDoc.createElement("price");
+        newhpricetxt = xmlDoc.createTextNode(hprice);
+        newhprice.appendChild(newhpricetxt);
+        newElement.appendChild(newhprice);
+    
+        newhcity= xmlDoc.createElement("city");
+        newhcitytxt = xmlDoc.createTextNode(hcity);
+        newhcity.appendChild(newhcitytxt);
+        newElement.appendChild(newhcity);
+    
+    
+        newhinformation = xmlDoc.createElement("information");
+        newhinformationtxt = xmlDoc.createTextNode(hinformation);
+        newhinformation.appendChild(newhinformationtxt);
+        newElement.appendChild(newhinformation);
+    
+        newhstate = xmlDoc.createElement("state");
+        newhstatetxt = xmlDoc.createTextNode(hstate);
+        console.log(hstate);
+        newhstate.appendChild(newhstatetxt);
+        newElement.appendChild(newhstate);
+    
+        console.log(newElement);
+        x.appendChild(newElement);
+    
+        x = xmlDoc.getElementsByTagName("sponsee");
+        xLen = x.length;
+        console.log(x)
+        console.log(xLen)
+    
+        shown();
+        // hideol();
+    }
+    
+
+
+    // Change the values
+    function changen(){
+        console.log("Change node value");
+        var x = xmlDoc.getElementsByTagName("sponsee");
+        var nodeno = parseInt(window.prompt("Enter the sponsorship id you want to change"));
+        console.log(nodeno)
+        if(nodeno=="")
+        {
+            alert("Invalid node number");
+        }
+        else
+        {
+            var newstatus = window.prompt("Enter the State(Approve/Reject)");
+            x = xmlDoc.getElementsByTagName("state")[nodeno-1].childNodes[0];    
+            x.nodeValue = newstatus;
+        }
+    
+        shown();
+    }
+</script>
+</html>

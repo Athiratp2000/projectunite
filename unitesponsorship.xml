@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ignite>
+<modules>
+  <title>Sponsorship Achievements</title>     
+<m>
+   <unite>
+        <id>1</id>
+        <name>Tanush</name>
+        <sport>Volleyball team:Netherlands</sport>
+        <award>World Cup</award>
+        <year>2007</year>
+        <contract>3</contract>
+        <status></status>
+    </unite>
+    <unite>
+        <id>2</id>
+        <name>Yuvraj</name>
+        <sport>Basketball team: Chicago Bulls</sport>
+        <award>Arjuna Award</award>
+        <year>2008</year>
+        <contract>4</contract>
+        <status></status>
+    </unite>
+    <unite>
+        <id>3</id>
+        <name>Irin</name>
+        <sport>Football team:Saskatchewan Roughriders</sport>
+        <award>Dronacharya Award</award>
+        <year>2009</year>
+        <contract>7</contract>
+        <status></status>
+    </unite>
+    <unite>
+        <id>4</id>
+        <name>Omar</name>
+        <sport>Hockey team:Philadelphia Flyers</sport>
+        <award>World Cup</award>
+        <year>2010</year>
+        <contract>8</contract>
+        <status></status>
+    </unite>
+    <unite>
+        <id>5</id>
+        <name>Santosh</name>
+        <sport>Cricket team:Royal Challengers Banglore</sport>
+        <award>Dhyan Chand Award</award>
+        <year>2018</year>
+        <contract>3</contract>
+        <status></status>
+    </unite>
+</m>
+
+</modules>
+</ignite>
