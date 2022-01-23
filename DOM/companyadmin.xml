@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?xml-stylesheet  href="companyadmin.xsl" type="text/xsl" ?>
+<Sports>    
+   <sponsee id="1">
+      <id>1</id>
+      <name>Anusha</name>
+      <price>300000</price>
+      <city>Dubai</city>
+      <information>Athlete Badminton</information>
+      <state>Pending</state>
+   </sponsee>
+   <sponsee id="2">
+      <id>2</id>
+      <name>Jinja</name>
+      <price>200000</price>
+      <city>Lumpur</city>
+      <information>Athlete Badminton</information>
+      <state>Reject</state>
+   </sponsee>
+   <sponsee id="3">
+      <id>3</id>
+      <name>Jungkook</name>
+      <price>100000</price>
+      <city>Bangkok</city>
+      <information>Athlete Badminton</information>
+      <state>Pending</state>
+   </sponsee>
+   <sponsee id="4">
+      <id>4</id>
+      <name>Jimin</name>
+      <price>800000</price>
+      <city>Mumbai</city>
+      <information>Athlete Badminton</information>
+      <state>Approved</state>
+   </sponsee>
+   <sponsee id="5">
+      <id>5</id>
+      <name>Taehyun</name>
+      <price>900000</price>
+      <city>Tokyo</city>
+      <information>Athlete Badminton</information>
+      <state>Pending</state>
+   </sponsee>
+   <sponsee id="6">
+      <id>6</id>
+      <name>Soobin</name>
+      <price>700000</price>
+      <city>Paris</city>
+      <information>Athlete Badminton</information>
+      <state>Approved</state>
+   </sponsee>
+   <sponsee id="7">
+      <id>7</id>
+      <name>Chaeunwoo</name>
+      <price>400000</price>
+      <city>Seoul</city>
+      <information>Athlete Badminton</information>
+      <state>Pending</state>
+   </sponsee>
+   <sponsee id="8">
+      <id>8</id>
+      <name>Hyuna</name>
+      <price>500000</price>
+      <city>Udaipur</city>
+      <information>Athlete Badminton</information>
+      <state>Pending</state>
+   </sponsee>
+   <sponsee id="9">
+      <id>9</id>
+      <name>Harrypotter</name>
+      <price>800000</price>
+      <city>New York</city>
+      <information>Athlete Badminton</information>
+      <state>Approved</state>
+   </sponsee>
+   <sponsee id="10">
+      <id>10</id>
+      <name>Omar</name>
+      <price>900000</price>
+      <city>Canada</city>
+      <information>Athlete Badminton</information>
+      <state>Pending</state>
+   </sponsee>
+</Sports>
