@@ -1,7 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<ignite>
-<modules>
-  <title>Sponsorship Achievements</title>     
+<?xml version="1.0" encoding="UTF-8"?>    
 <m>
    <unite>
         <id>1</id>
@@ -49,6 +46,3 @@
         <status></status>
     </unite>
 </m>
-
-</modules>
-</ignite>
