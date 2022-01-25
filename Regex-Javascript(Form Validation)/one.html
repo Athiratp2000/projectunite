@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Athlete Registeration</title>
+        <link rel="stylesheet" href="styles.css">
+    </head>
+<body>
+    <h1>Athlete Registeration</h1>
+    <script>
+        function test(event)
+        {
+            let code=event.which;
+            if(code>47&&code<58)
+            return false;
+            else
+            return true;
+        }
+        function validate()
+        {
+           var username=document.getElementById("uname");
+           if(username.value.trim()=="")
+           {
+               alert("Blank Username");
+               username.style.border="solid 3px red";
+               document.getElementById("lbuser").style.visibility="visible";
+               return false;
+           }
+           if(sport.value.trim()=="")
+           {
+               alert("Sport field cannot be empty");
+               sport.style.border="solid 3px red";
+               document.getElementById("lbuser1").style.visibility="visible";
+               return false;
+           }
+           if(achievement.value.trim()=="")
+           {
+               alert("Achievement field cannot be empty");
+               achievement.style.border="solid 3px red";
+               document.getElementById("lbuser2").style.visibility="visible";
+               return false;
+           }
+        }
+    </script>
+    <form onsubmit="return validate()" action="success.html">
+            <input type="text" name="username" id="uname" onkeypress="return test(event)" placeholder="sponsee username">
+            <label id="lbuser" style="color: red; visibility: hidden;">Invalid User</label><br>
+
+            <input type="text" name="sport" id="sport" onkeypress="return test(event)" placeholder="sponsee sport">
+            <label id="lbuser1" style="color: red; visibility: hidden;">Invalid sport</label><br>
+
+            <input type="text" name="achievement" id="achievement" onkeypress="return test(event)" placeholder="achievement">
+            <label id="lbuser2" style="color: red; visibility: hidden;">Invalid entry!</label><br>
+
+
+
+            <button type="submit" value="Submit">Submit</button>
+    </form>
+</body>
+</html>
