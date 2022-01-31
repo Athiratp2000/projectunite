@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/TR/xhtml1" xml:lang="en" lang="en">
+   <head>
+      <title>Unite sponsorship Signup</title>
+      <style>
+        *{
+          font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+        }
+          body{
+            background-image: url('sport1.jpg');
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            /* backdrop-filter: blur(4x);     */
+            /* backdrop-filter: grayscale(100%);            */
+          }
+          header{
+    margin-top: -10px;
+    width: 1367px;
+    height: 70px;
+    display: flex;
+    background-color: white;
+    /* opacity: 0.9; */
+    z-index: 5;
+    border: none;
+    justify-content: space-between;
+    position: fixed;
+    margin-left: -10px;
+    }
+          .container{                   
+        /* position:absolute; */
+        border-radius: 10px;       
+        left: 50%;
+        transform: translate(90%, 20%);
+        opacity: 0.9;
+        box-sizing: content-box; 
+        min-height: 460px;
+        height: auto;
+        width: 500px;
+        padding-bottom:30px;
+        background-color:#0b3f64;
+          }
+          .input {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 370px;
+    font-size: medium;
+    border-radius: 5px;
+    box-sizing: border-box;
+    
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    background-color:white;
+    color: black;
+    padding: 10px;
+}
+button{
+    margin-left: 32%;
+    align-content: center;
+    width: 100px;
+    box-sizing: border-box;
+    padding: 10px;
+    font-size: 15px;
+    background-color: #ff6600;    
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+nav a{
+    text-decoration: none;        
+    color: #0b3f64;
+    padding: 25px;
+    display: inline-block;
+     }
+button:hover{
+    cursor: pointer;
+    background-color: red;
+
+}
+      </style>
+   </head>
+	
+   <body>
+    <div class="container">
+    <form  action="sucess.html" style="color: white;margin-left:13%;" onsubmit="return validation()"><br><br><br>
+        <center><a href="index.html" target="_blank"><img src="new.png" alt="girl" style="width: 40%; border-radius: 2px;"></a>
+            <p>Unite</p>
+            <a href="signin.html" style="color: white;">Already an user? Log in</a>
+        </center>
+        <br>
+        
+        <input class="input" type="email" id="useremail"  placeholder="Email"><br><br><br>
+
+        <input class="input" type="password" id="psw"  placeholder="Password"><br><valid style="font-size: 15px;"></valid><br><br>
+
+        <input class="input" type="password" id="cpsw"  placeholder="Confrim Password" ><br><cvalid style="font-size: 15px;"></cvalid><br><br><br>
+
+        <button title="Submit" >Register</button>
+
+        
+       </form>
+    </div>
+   </body>
+</html>
+<script>
+ 
+  var memail=document.getElementById('useremail');
+  var mpassword=document.getElementById('psw');
+  var cp=document.getElementById('cpsw');
+  var pvalid=document.getElementsByTagName('valid');
+  var confirmvalid=document.getElementsByTagName('cvalid');
+
+  cp.onkeyup=function(){
+      if(cp.value!=mpassword.value){
+       
+        cp.style.border="solid 2px red";
+      }
+      if(cp.value==mpassword.value){
+        
+        cp.style.border="solid 1px white";
+      }
+  }
+
+  function validation()
+  {
+      if (memail.value=="" && mpassword.value==""){          
+          memail.style.border="solid 2px red";
+          mpassword.style.border="solid 2px red";
+          cp.style.border="solid 2px red";
+          return false;
+      }
+      
+
+      if (memail.value==""){
+          memail.style.border="solid 2px red";
+          return false;
+      }
+     if (mpassword.value==""){
+          mpassword.style.border="solid 2px red";
+          return false;
+      }
+
+      if (cp.value==""){
+          cp.style.border="solid 2px red";
+          return false;
+      }
+      
+      
+  }
+  memail.onkeydown=function()
+    {
+   
+       const validemail=/^([a-z0-9\.-]+)@([A-z]+)(university)\.([a-z]{1,3})$/;
+      
+       if(validemail.test(memail.value))
+       {
+        memail.style.border="solid 1px white"; 
+       }
+       else{
+        memail.style.border="solid 2px red";
+       }
+    }
+   
+
+    mpassword.onkeyup=function(){
+        const validpsw=/^(?=.*\d)(?=.*[a-z])(?=.*[@$!%*?&])(?=.*[A-Z]).{8,}$/;
+        if(validpsw.test(mpassword.value))
+       {
+        pvalid[0].style.display="none"; 
+        mpassword.style.border="solid 1px white"; 
+       }
+       else{
+        mpassword.style.border="solid 2px red";
+        var upperCaseLetters = /[A-Z]/g;
+        if(mpassword.value.match(upperCaseLetters)) {
+            // pvalid[0].style.display="none";  
+          
+        } else {
+            pvalid[0].innerText="Aleast 1 UpperCase";
+            pvalid[0].style.color="red";
+           
+        }
+
+        var lowerCaseLetters = /[a-z]/g;
+        if(mpassword.value.match(lowerCaseLetters)) {
+            // pvalid[0].style.display="none";  
+          
+        } else {
+            pvalid[0].innerText="Aleast 1 lowerCase";
+            pvalid[0].style.color="red";
+           
+        }
+        
+
+        var numbers = /[0-9]/g;
+        if(mpassword.value.match(numbers)) {  
+            // pvalid[0].style.display="none";
+        } else {
+            pvalid[0].innerText="Aleast 1 Digit";
+            pvalid[0].style.color="red";
+        }
+
+        var numbers = /[@$!%*?&]/g;
+        if(mpassword.value.match(numbers)) {  
+            // pvalid[0].style.display="none";
+        } else {
+            pvalid[0].innerText="Aleast 1 Special character";
+            pvalid[0].style.color="red";
+        }
+        
+        
+        if(mpassword.value.length>=8) {  
+            // pvalid[0].style.display="none";
+        } else {
+            pvalid[0].innerText="Minimum 8 characters";
+            pvalid[0].style.color="red";
+        }
+
+       }
+    }
+   
+</script>
