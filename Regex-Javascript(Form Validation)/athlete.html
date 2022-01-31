@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/TR/xhtml1" xml:lang="en" lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feedback Form</title>
+    <link rel="shortcut icon" href="new.png" type="">
+    <link href='https://fonts.googleapis.com/css?family=Nunito:400,300' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="athlete.css">
+</head>
+<body>
+    <script type="text/javascript" src="validation.js"></script>
+    <!---validation for locking the keyboard when digit is entered in name area --->
+    <!---validation in name and adress field(to enter only street or city name) --->
+
+    <script>
+
+               
+
+        const inputs = document.querySelectorAll('input');
+
+        const pattern = {
+           
+            user_email: /^([a-zA-z0-9.]{4,20})@(c|C)hristuniversity.in$/
+        };
+
+        // validation function
+        function validate(field,regex ){
+            if(regex.test(field.value)) {
+                field.className = 'valid';
+            }else{
+                field.className = 'invalid';
+            }
+        }
+
+        inputs.forEach((input) => {
+            input.addEventListener('keyup',(e) => {
+                console.log(e.target.attributes.name.value);
+                validate(e.target,pattern[e.target.attributes.name.value]);
+            });
+        });
+
+        function test(event)
+        {
+            let code=event.which;
+            if(code>47&&code<58)
+            return false;
+            else
+            return true;
+        }
+        function validate()
+        {
+             // validation name lock digit
+           var username=document.getElementById("uname");
+           if(username.value.trim()=="")
+           {
+               alert("Please enter your name");
+               username.style.border="solid 3px red";
+               document.getElementById("lbuser").style.visibility="visible";
+               return false;
+           }
+           // validation address  lock digit(only street and city)
+        
+            var address=document.getElementById("uaddress");
+           if(address.value.trim()=="")
+           {
+               alert("Address field cannot be empty");
+               address.style.border="solid 3px red";
+               document.getElementById("lbuser").style.visibility="visible";
+               return false;
+           }
+
+           //additional comment validation
+           var comment=document.getElementById("com");
+           if(comment.value.trim()=="")
+           {
+               alert("Additional field have to be filled! ");
+               comment.style.border="solid 3px red";
+               document.getElementById("lbuser").style.visibility="visible";
+               return false;
+           }
+
+        
+    }
+    </script>
+   <form onsubmit="return validate()" action="sucess.html"> 
+    <a href="index.html" target="_blank"><img src="new.png" alt="girl" style="width: 100%; border-radius: 6px;"></a>
+    <center><p style ="color: #1a237e; font-weight: bolder;">Find now the perfect sponsorship opportunity in just spin registeration    </p></center>
+    
+      <label for="name">Name:</label>
+      <input type="text" id="uname" name="username" onkeypress="return test(event)">
+      <label id="lbuser" style="color: red; visibility: hidden;">Enter your name properly</label>
+
+      <label for="address">Address:</label>
+      <input type="text" id="uaddress" name="address" onkeypress="return test(event)" >
+      <label id="lbuser" style="color: red; visibility: hidden;">Enter your address(street/city) numbers not accepted!</label>
+
+      
+      <label>Your interest on this Unite sports sponsorship influenced from:</label>
+      <input type="radio" id="tv" name="tv"><label  class="light">TV</label><br>
+      <input type="radio" id="internet" name="internet"><label class="light">Internet</label><br>
+      <input type="radio" id="others" name="others"><label class="light">Others</label><br><br>
+    
+      <label for="bio">Your Remarks</label>
+      <textarea id="com" name="com"></textarea>
+    
+      <label>Get the latest sponsership offers updates in your dashboard</label>
+      <input type="checkbox" id="Kit sponsorship"  name="Kit sponsorship"><label class="light" >Kit sponsorship</label><br>
+      <input type="checkbox" id="Media sponsorship" name="Media sponsorship"><label class="light">Media sponsorship</label><br>
+      <input type="checkbox" id="Nestle premium offers"  name="Nestle premium offers"><label class="light">Nestle premium offers</label><br>
+      <input type="checkbox" id="Coca Cola Gold package offer" name="Coca Cola Gold package offer"><label class="light">Coca Cola Gold package offer</label><br>
+      <input type="checkbox" id="Special premium sponsers"  name="Special premium sponsers"><label class="light">Special premium sponsers</label><br><br><br> 
+    <button type="submit">Submit</button>
+</form>
+
+  <div class="col s6">
+   
+    </div>
+</body>
+</html>
