@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Team Admin</title>
+    <script src="team.js"></script>
+    <style >  
+        * body
+         {
+             
+             font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+             box-sizing: border-box;        
+         } 
+         .login_container  
+         {        
+             margin-top: 50px;             
+             position:absolute;
+             border-radius: 10px;
+             top: 50%;
+             left: 50%;
+             transform: translate(-50%, -50%);
+             opacity: 0.9;
+             box-sizing: content-box; 
+             min-height: 500px;
+             height: auto;
+             width: 440px;
+             padding:0px;
+             background-color:black;
+         }
+         .display1{
+             border-left: 1px solid white;
+             margin-top: 50px;             
+             position:absolute;
+             border-radius: 10px;
+             top: 50%;
+             left: 50%;
+             transform: translate(50%, -50%);
+             opacity: 0.9;
+             box-sizing: content-box; 
+             min-height: 500px;
+             height: auto;
+             width: 455px;
+             padding:0px;
+             background-color:black;
+}
+         .login_box{
+             padding-top: 60px;
+             color:white;         
+             font-size: 20px;
+             position:absolute;
+             top: 40%;
+             left: 120px;
+             transform: translate(-50%, -50%);
+         }
+input {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    width: 350px;
+    font-size: medium;
+    border-radius: 5px;
+    box-sizing: border-box;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #ccc;
+    background-color:black;
+    color: white;
+    padding: 10px;
+}
+button{
+    align-content: center;
+    width: 100px;
+    box-sizing: border-box;
+    padding: 10px;
+    background-color: #29959c;    
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+button:hover{
+    cursor: pointer;
+    background-color: rgb(215, 236, 18);
+
+}
+input:hover
+{
+    background-color: black;
+}
+input[type="date"]::-webkit-calendar-picker-indicator {
+  cursor: pointer;
+  border-radius: 4px solid white;
+  margin-right: 2px;
+  opacity: 0.6;
+  filter: invert(0.8);
+}
+.display{
+             border-right: 1px solid white;
+             margin-top: 5px;             
+             position:absolute;
+             border-radius: 10px;
+             opacity: 0.9;
+             box-sizing: content-box; 
+             min-height: 500px;
+             height: auto;
+             width: 440px;
+             padding:0px;
+             background-color:black;
+
+}
+     
+     
+       
+         </style>
+</head>
+<body>
+    
+    <select id="demo" onchange="show()">
+        <option value="Select Color">Choose your theme</option>
+        <option value="grey">Grey</option>
+        <option value="white">White</option>
+        <option value="black">Black</option>
+        </select>
+    <script>
+        function show()
+        {
+            var value=document.getElementById("demo").value;
+            if(value!="Select Color")
+            {
+                document.bgColor=value;
+                document.cookie="color="+value+";expires=Fri,2 Feb 2022 01:00:00 UTC;";
+            }
+        }
+        window.onload=function()
+        {
+            if(document.cookie.length!=0)
+            {
+                var a=document.cookie.split("=");
+                document.getElementById("demo").value=a[1];
+                document.bgColor=a[1];
+            }
+        }
+    </script>
+<div >
+
+    <h1 style="text-align: center;">Unite Sport Team Registeration</h1>
+   
+        <div class="login_container">
+             <!-- Create Cookies -->
+            <div class="login_box" style="box-sizing: border-box;margin-left: 110px;">
+                <label style="color: white;scroll-margin-bottom:40%;font-size: 25px; ">Team Members</label><br><br>
+              
+                    <input class="input"  id="name" placeholder="Name" /><br><br>
+               
+                     
+                    <input class="input" id="createInputKey" placeholder="Email"/><br><br>
+               
+                    
+                    <input class="input role" id="createInputValue" placeholder="Role"/><br><br>
+               
+                            
+                    <input class="input" type="date" id="createDate" placeholder="Expiry Date " /><br>
+                <br><br>
+                <div style="margin-left: -40px;">              
+               
+                    <div style="margin-left: 40px;"> <button onclick="createCookies()" id="create" class="btn">COOKIES</button></div>
+               
+               
+           
+           
+               <div style="margin-left:160px; margin-top: -35px;">  <button type="button" class="btn" id="save_value">LOCAL</button></div>
+
+               
+                            
+               <div style="margin-left:280px; margin-top: -35px;">  <button type="button" class="btn" id="save_s">SESSION</button></div>
+            </div> 
+          
+            </div>
+
+        </div><br>
+        
+
+<div class="display">
+        
+            <!-- Delete Cookies -->
+            <div class="container"><br><br>
+                <label style="color: white;margin-left:45%;font-size: 25px; ">Delete</label><br><br><br>
+               
+    
+                
+                   
+                    <input style="margin-left: 50px;" class="input" id="deleteInput" placeholder="Email"/><br><br><br>
+                
+
+                <button  style="margin-left: 150px;width: 150px;" onclick="deleteCookies()" id="delete" class="btn">DELETE COOKIES</button>
+            </div><br><br><br>
+       
+             
+
+        
+</div> 
+
+<div class="display1">
+        
+    <!-- Delete Cookies -->
+    <div class="container"><br><br>
+        <label style="color: white;margin-left:45%;font-size: 25px; ">Display</label><br><br><br>
+
+      <!-- Display Cookies -->
+    <div class="container">              
+        <button onclick="displayCookies()" style="margin-left: 150px;width: 150px;" id="displayButton" class="btn">TEAM DETAILS</button>
+        <br><br>
+        <div id="display" style="color: white;margin-left: 150px;"></div>
+    </div>
+
+
+</div> 
+
+
+</div>
+<script src="team1.js"></script>
+
+</body>
+</html>
