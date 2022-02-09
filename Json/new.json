@@ -1,0 +1,30 @@
+{"mechanic":
+  [
+    {"status":"0","city":"banglore","exp":17,"name":"Athira","price":50000.00,"type":"Full, sponsorship","contact":"9900808675"},
+    {"status":"1","city":"canada","exp":16,"name":"Sunitha","price":200000.00,"type":"Media, sponsorship","contact":"9486693427"},
+    {"status":"2","city":"newyork","exp":11,"name":"Vishwanath","price":1500000.00,"type":"Kit, sponsorship","contact":"8883712624"},
+    {"status":"3","city":"bangkok","exp":15,"name":"Apporva","price":360000.00,"type":"Association, Sponsorship","contact":"9082645654"},
+    {"status":"4","city":"banglore","exp":3,"name":"Kushagra","price":400000.00,"type":"Media, Sponsorship","contact":"9900808574"},
+    {"status":"0","city":"dubai","exp":17,"name":"Nijimol","price":350000.00,"type":"Full, sponsorship","contact":"9443083277"},
+    {"status":"1","city":"tokyo","exp":16,"name":"Adarash","price":500000.00,"type":"Complete, package","contact":"9486693427"},
+    {"status":"2","city":"istanbul","exp":11,"name":"Harry","price":1500000.00,"type":"Media, Sponsorship","contact":"9047887913"},
+    {"status":"3","city":"chicago","exp":15,"name":"Jimin","price":360000.00,"type":"Complete, package","contact":"8765676453"},
+    {"status":"4","city":"amsterdam","exp":3,"name":"Jimmy","price":400000.00,"type":"Complete, package","contact":"6677558899"},
+    {"status":"0","city":"banglore","exp":17,"name":"Prajan","price":350000.00,"type":"Association, Sponsorship","contact":"87656474647"},
+    {"status":"1","city":"mumbai","exp":16,"name":"Mouni","price":500000.00,"type":"Partial, Package Sponsorship","contact":"9486693427"},
+    {"status":"2","city":"banglore","exp":11,"name":"Maria","price":100000.00,"type":"Association, Sponsorship","contact":"9047887913"},
+    {"status":"3","city":"mexico","exp":15,"name":"IU","price":360000.00,"type":"Equidence, Sponsorship","contact":"88776554433"},
+    {"status":"4","city":"moscow","exp":3,"name":"Jichangwook","price":400000.00,"type":"Full, sponsorship","contact":"8241654654"},
+    {"status":"1","city":"dubai","exp":16,"name":"Rose","price":500000.00,"type":"Partial, Package, Sponsorship","contact":"9486693427"},
+    {"status":"2","city":"seoul","exp":11,"name":"Jenny","price":1500000.00,"type":"Media, Sponsorship","contact":"9047887913"},
+    {"status":"3","city":"banglore","exp":15,"name":"Amrutha","price":360000.00,"type":"Full, sponsorship","contact":"8765676453"},
+    {"status":"4","city":"canada","exp":3,"name":"Harini","price":400000.00,"type":"Partial, Package, Sponsorship","contact":"6677558899"},
+    {"status":"0","city":"madrid","exp":17,"name":"Priyanaa","price":350000.00,"type":"Association, Sponsorship","contact":"87656474647"},
+    {"status":"1","city":"boston","exp":16,"name":"Mounika","price":500000.00,"type":"Complete, package","contact":"9486693427"},
+    {"status":"2","city":"bangkok","exp":11,"name":"Imikia","price":100000.00,"type":"Media, Sponsorship","contact":"9047887913"},
+    {"status":"3","city":"tokyo","exp":15,"name":"Nani","price":360000.00,"type":"Complete, package","contact":"88776554433"},
+    {"status":"4","city":"banglore","exp":3,"name":"Hamruma","price":400000.00,"type":"Full, sponsorship","contact":"8241654654"}
+
+  ]
+ }
+ 
