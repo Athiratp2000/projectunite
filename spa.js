@@ -1,0 +1,54 @@
+angular.module('myapp',['ngRoute'])
+.config(function($routeProvider)
+{
+    $routeProvider.when('/home',
+    {
+        templateUrl:'christ/home.html',
+        controller:'homectrl'}).when('/home/:first/:last',
+        {
+            templateUrl:'christ/home.html',
+            controller:'homectrl'
+    }).when('/course',
+    {
+        templateUrl:'christ/course.html',
+        controller:'coursectrl'
+    }).when('/details',
+    {
+        templateUrl:'christ/details.html',
+        controller:'studentctrl'
+    })
+})
+.controller('myctrl',function()
+{
+
+})
+.controller("homectrl",function($scope,$routeParams)
+{
+    $scope.message="DreamBig"
+    if($routeParams.first&&$routeParams.last)
+    {
+        $scope.person={
+            first:$routeParams.first,
+            last:$routeParams.last
+        };
+    }
+})
+.controller("coursectrl",function($scope,$http)
+{
+    $http.get('https://athiratp2000.github.io/comeonjson/json.json')
+    .success(function(response)
+    {
+        $scope.houseinformation=response.houseInformation; 
+    });
+
+})
+
+
+.controller("studentctrl",function($scope,$http)
+{
+    $http.get('https://athiratp2000.github.io/comeonjson/json.json')
+    .success(function(response)
+    {
+        $scope.houseinformation=response.houseInformation; 
+    });
+})
